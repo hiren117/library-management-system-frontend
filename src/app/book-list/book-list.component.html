@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Book List 📚</h2>
+    <p *ngIf="errorMessage" class="error">{{errorMessage}}</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>isbn</th>
+                <th>PublishedYear</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{book.id}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.isbn}}</td>
+                <td>{{book.publishedYear}}</td>
+                <td>
+                    <button class="btn btn-info" (click)="editBook(book.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
