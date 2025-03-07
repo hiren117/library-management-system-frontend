@@ -1,6 +1,10 @@
 <div class="container">
     <h2>Book List 📚</h2>
     <p *ngIf="errorMessage" class="error">{{errorMessage}}</p>
+    <button (click)="goToHome()"
+        style="margin: 10px; padding: 5px 10px; background-color: blue; color: white; border: none; cursor: pointer;">
+        Home
+    </button>
 
     <table class="table">
         <thead>

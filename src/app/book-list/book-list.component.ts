@@ -57,4 +57,7 @@ export class BookListComponent implements OnInit {
 
     this.router.navigate(['/book-form', id]);  // ✅ Use router correctly
   }
+  goToHome() {
+    this.router.navigate(['/']);
+  }
 }
