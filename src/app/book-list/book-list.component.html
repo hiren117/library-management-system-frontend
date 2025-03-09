@@ -1,29 +1,24 @@
 <div class="container">
     <h2>Book List 📚</h2>
-    <p *ngIf="errorMessage" class="error">{{errorMessage}}</p>
-    <button (click)="goToHome()"
-        style="margin: 10px; padding: 5px 10px; background-color: blue; color: white; border: none; cursor: pointer;">
-        Home
-    </button>
-
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Title</th>
                 <th>Author</th>
-                <th>isbn</th>
-                <th>PublishedYear</th>
-
+                <th>ISBN</th>
+                <th>Published Year</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let book of books">
-                <td>{{book.id}}</td>
-                <td>{{book.title}}</td>
-                <td>{{book.author}}</td>
-                <td>{{book.isbn}}</td>
-                <td>{{book.publishedYear}}</td>
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.isbn }}</td>
+                <td>{{ book.publishedYear }}</td>
                 <td>
                     <button class="btn btn-info" (click)="editBook(book.id)">Edit</button>
                     <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button>
@@ -31,4 +26,5 @@
             </tr>
         </tbody>
     </table>
+    <button class="btn-home" (click)="goToHome()">Home</button>
 </div>
