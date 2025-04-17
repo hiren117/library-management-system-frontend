@@ -26,6 +26,7 @@ export class BookListComponent implements OnInit {
 
   loadBooks(): void {
     console.log("Loading books...");
+    console.log("JWT Token:", localStorage.getItem('token'));
     this.bookService.getBooks().subscribe(
       (data) => {
         this.books = data;
