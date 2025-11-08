@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  user = { userName: '', password: '', fullName: '', mobileNumber: 0, emailId: '', };
+  user = { username: '', password: '', fullName: '', mobileNumber: 0, emailId: '', };
   isEdit = false;
   userId?: number;
   errorMessage: string = ''; // Variable to store error message
@@ -55,7 +55,7 @@ export class SignupComponent {
       }
     );
 
-    console.log('Signing up with:', this.user);
+    //console.log('Signing up with:', this.user);
   }
 
   goToLogin() {

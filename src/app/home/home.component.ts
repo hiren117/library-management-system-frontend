@@ -16,4 +16,7 @@ export class HomeComponent {
   goToBookList() {
     this.router.navigate(['/book-list']);
   }
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
 }

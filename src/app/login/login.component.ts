@@ -25,7 +25,6 @@ export class LoginComponent {
     // Here, you will call the backend API for authentication (to be implemented later)
     // Clear any previous error messages
     this.errorMessage = '';
-
     // Create login payload
     const loginData = {
       userName: this.userName,
@@ -33,7 +32,7 @@ export class LoginComponent {
     };
     this.userService.loginUser(loginData).subscribe({
       next: (response: any) => {
-        console.log('login in loginUser', response);
+        console.log('login TOKEN verifying :', response.token);
         localStorage.setItem('token', response.token); // store JWT token
         this.router.navigate(['/home']); // redirect after login which is home page
       },
@@ -46,8 +45,6 @@ export class LoginComponent {
         }
       }
     })
-
-    console.log('onLogin Logging in with:', this.userName, this.password);
   }
   onSignUp() {
     // Here, you will call the backend API for authentication (to be implemented later)

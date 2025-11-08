@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     // { path: '', component: HomeComponent }, // Default route
-    { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirect default route to /login
+    { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect default route to /login
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'home', component: HomeComponent },
